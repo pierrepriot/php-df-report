@@ -17,7 +17,7 @@
 /* ***************************************************************** */
 /* configuration                                                     */
 
-$critical = 5; // use thresold for turning on reports
+$critical = 90; // use thresold for turning on reports
 $to = 'your@email.com'; // report destination email  address
 $from = 'your@email.com'; // report sender email address
 
@@ -26,7 +26,7 @@ $from = 'your@email.com'; // report sender email address
 $report = ''; // text report, to be displayed or sent over e-mail
 
 $hostname = exec('hostname'); // reads host name from system
-$res =  exec('df -h', $output); // get human readable disk use for all partitions
+$res =  exec('df -h', $output); // gets human readable disk use for all partitions
 
 foreach($output as $k => $line){
 	// if partition matches a filesystem mount point
